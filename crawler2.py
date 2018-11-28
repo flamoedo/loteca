@@ -27,9 +27,9 @@ def navigate(init_url):
 
     for liga in ('bra-serie-b-','bra-serie-a-'):
 
-        for ano in range(2011,2018, 1):
+        for ano in range(2011,2019, 1):
 
-            for rodada in range(1,38, 1):
+            for rodada in range(1,39, 1):
 
                 my_url = init_url + liga + str(ano) + '-spieltag/' + str(rodada) + '/'
 
@@ -51,7 +51,7 @@ def navigate(init_url):
 
                 df = pd.DataFrame(td_,columns=['Data','Hora','Home','S','Away','Res','',''])
 
-                df.to_csv('arquivo2.csv')
+                df.to_csv('arquivo3.csv')
 
 if __name__ == "__main__":
     navigate(url)
